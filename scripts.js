@@ -11,15 +11,53 @@ function getComputerChoice() {
     //else if 3 console log scissor
 
     if (x == 1) {
-        console.log('rock')
+        return 'rock'
     } else if (x == 2) {
-        console.log('paper')
+        return 'paper'
     } else if (x == 3) {
-        console.log('scissors')
+        return 'scissors'
     }
 
 }
 
-getComputerChoice()
+function playRound(playerSelection, computerSelection) {
+
+    let playerSelectionLower = playerSelection.toLowerCase();
+
+    if (playerSelectionLower == 'rock' && computerSelection == 'paper') {
+        return 'You Lose! Paper beats Rock!'
+    } else if (playerSelectionLower == 'paper' && computerSelection == 'scissors') {
+        return 'You lose! Scissors beat Paper!'
+    } else if (playerSelectionLower == 'scissors' && computerSelection == 'rock') {
+        return 'You lose! Rock beats Scissors!'
+    } else if (playerSelectionLower == 'rock' && computerSelection == 'scissors') {
+        return 'You win! Rock beats Scissors!'
+    } else if (playerSelectionLower == 'paper' && computerSelection == 'rock') {
+        return 'You win! Paper beats rock!'
+    } else if (playerSelectionLower == 'scissors' && computerSelection == 'paper') {
+        return 'You win! Scissors beat Paper!'
+    } else {
+        return 'Draw - try again!'
+    }
+}
 
 
+function game() {
+    for (let i = 0; i < 5; i++) {
+        console.log(playRound(playerSelection, computerSelection))
+
+     }
+}
+
+
+
+game()
+
+
+
+
+
+const playerSelection = 'Rock';
+const computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
+console.log(playerSelection, computerSelection)
