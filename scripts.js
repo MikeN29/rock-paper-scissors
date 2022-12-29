@@ -20,16 +20,15 @@ function getComputerChoice() {
 
 }
 
+
 function playRound(playerSelection, computerSelection) {
 
     let playerSelectionLower = playerSelection.toLowerCase();
 
     if (playerSelectionLower == 'rock' && computerSelection == 'paper') {
-        return 'You Lose! Paper beats Rock!'
-        // add score to computer
+        return 'You Lose! Paper beats Rock!';
     } else if (playerSelectionLower == 'paper' && computerSelection == 'scissors') {
         return 'You lose! Scissors beat Paper!'
-        //add score to computer - let computerScore += 1
     } else if (playerSelectionLower == 'scissors' && computerSelection == 'rock') {
         return 'You lose! Rock beats Scissors!'
     } else if (playerSelectionLower == 'rock' && computerSelection == 'scissors') {
@@ -43,6 +42,9 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+let playerScore = 0;
+let computerScore = 0;
+
 
 function game(playerSelection, computerSelection) {
 
@@ -52,7 +54,19 @@ function game(playerSelection, computerSelection) {
         
         const currentRound = playRound(playerSelection, computerSelection)
         console.log(currentRound)
-     }     
+
+        gameScore(playerSelection, computerSelection)
+        console.log('Computer Score: ' + computerScore)
+        console.log('Your Score: ' + playerScore)
+     } 
+     
+     if (computerScore > playerScore) {
+        console.log('Computer Wins!')
+     } else if (playerScore > computerScore) {
+        console.log('You Win!')
+     } else {
+        console.log('Draw!')
+     }
         
 }
 
@@ -61,6 +75,29 @@ let playerSelection = '';
 let computerSelection = getComputerChoice();
 
 
-console.log(game(playerSelection, computerSelection));
 
-// need a function to keep score of game
+(game(playerSelection, computerSelection));
+
+
+
+function gameScore(playerSelection, computerSelection) {
+
+    let playerSelectionLower = playerSelection.toLowerCase();
+
+    if (playerSelectionLower == 'rock' && computerSelection == 'paper') {
+        computerScore++;
+    } else if (playerSelectionLower == 'paper' && computerSelection == 'scissors') {
+        computerScore++;
+    } else if (playerSelectionLower == 'scissors' && computerSelection == 'rock') {
+        computerScore++;
+    } else if (playerSelectionLower == 'rock' && computerSelection == 'scissors') {
+        playerScore++;
+    } else if (playerSelectionLower == 'paper' && computerSelection == 'rock') {
+        playerScore++;
+    } else if (playerSelectionLower == 'scissors' && computerSelection == 'paper') {
+        playerScore++;
+    } else {
+        return 'Draw - try again!'
+    }
+}
+
