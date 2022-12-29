@@ -26,8 +26,10 @@ function playRound(playerSelection, computerSelection) {
 
     if (playerSelectionLower == 'rock' && computerSelection == 'paper') {
         return 'You Lose! Paper beats Rock!'
+        // add score to computer
     } else if (playerSelectionLower == 'paper' && computerSelection == 'scissors') {
         return 'You lose! Scissors beat Paper!'
+        //add score to computer - let computerScore += 1
     } else if (playerSelectionLower == 'scissors' && computerSelection == 'rock') {
         return 'You lose! Rock beats Scissors!'
     } else if (playerSelectionLower == 'rock' && computerSelection == 'scissors') {
@@ -44,22 +46,21 @@ function playRound(playerSelection, computerSelection) {
 
 function game(playerSelection, computerSelection) {
 
-     for (let i = 0; i < 5; i++) {
-        console.log(playRound(playerSelection, computerSelection));
-
-    }
-
-     
-
+    for (let i = 0; i < 5; i++) {
+        let playerSelection = prompt();
+        let computerSelection = getComputerChoice();
+        
+        const currentRound = playRound(playerSelection, computerSelection)
+        console.log(currentRound)
+     }     
+        
 }
 
 
+let playerSelection = '';
+let computerSelection = getComputerChoice();
 
-
-
-const playerSelection = 'Rock';
-const computerSelection = getComputerChoice();
-//console.log(playRound(playerSelection, computerSelection));
-//console.log(playerSelection, computerSelection)
 
 console.log(game(playerSelection, computerSelection));
+
+// need a function to keep score of game
