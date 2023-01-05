@@ -48,9 +48,7 @@ let computerScore = 0;
 
 /*function game(playerSelection, computerSelection) {
 
-    for (let i = 0; i < 5; i++) {
-        //let playerSelection = prompt();
-        let computerSelection = getComputerChoice();
+   
         
         const currentRound = playRound(playerSelection, computerSelection)
         console.log(currentRound)
@@ -100,6 +98,16 @@ function gameScore(playerSelection, computerSelection) {
     } else {
         return 'Draw - try again!'
     }
+    document.getElementById("playerScore").innerHTML = playerScore;
+    document.getElementById("computerScore").innerHTML = computerScore;
+
+    if (playerScore == 5) {
+        document.getElementById("gameWinner").textContent = "You win the game!";
+    } else if (computerScore == 5) {
+        document.getElementById("gameWinner").textContent = "The computer has won the game!";
+    }
+
+
 }
 
 let btn = document.querySelectorAll('#btn');
@@ -108,6 +116,7 @@ btn.forEach(function (i) {
         let playerSelection = i.getAttribute("data-key");
         let computerSelection = getComputerChoice();
         playRound(playerSelection, computerSelection);
+        gameScore(playerSelection, computerSelection);
         console.log(computerSelection);
     });
 });
@@ -122,8 +131,9 @@ const result = document.createElement('div');
 
 result.classList.add('content');
 
-//resultsDiv.appendChild(result);
-
 resultsDiv.insertBefore(result, score)
+
+
+
 
 

@@ -3,11 +3,13 @@
 }
 
 
-.score {
-    background-color: brown;
-    padding-top: 10px;
-}
-
 .content {
     height: 30px;
 }
+
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-ted4{text-align:center;vertical-align:middle}
+.tg .tg-xwyw{text-align:center;vertical-align:middle}
+
