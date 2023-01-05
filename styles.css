@@ -1,0 +1,13 @@
+.resultsDiv {
+    height: 500px;
+}
+
+
+.score {
+    background-color: brown;
+    padding-top: 10px;
+}
+
+.content {
+    height: 30px;
+}
