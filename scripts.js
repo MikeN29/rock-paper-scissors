@@ -45,38 +45,7 @@ function playRound(playerSelection, computerSelection) {
 let playerScore = 0;
 let computerScore = 0;
 
-
-/*function game(playerSelection, computerSelection) {
-
-   
-        
-        const currentRound = playRound(playerSelection, computerSelection)
-        console.log(currentRound)
-
-        gameScore(playerSelection, computerSelection)
-        console.log('Computer Score: ' + computerScore)
-        console.log('Your Score: ' + playerScore)
-     } 
-     
-     if (computerScore > playerScore) {
-        console.log('Computer Wins!')
-     } else if (playerScore > computerScore) {
-        console.log('You Win!')
-     } else {
-        console.log('Draw!')
-     }
-        
-}*/
-
-
-//let playerSelection = '';
-//let computerSelection = getComputerChoice();
 let computerSelection = ''
-
-
-
-//(game(playerSelection, computerSelection));
-
 
 
 function gameScore(playerSelection, computerSelection) {
@@ -134,6 +103,21 @@ result.classList.add('content');
 resultsDiv.insertBefore(result, score)
 
 
+function restartGame() {
+    location.reload()
+}
+
+
+/*   document.getElementById("btn").disabled = true this disables
+the button. it might be a good idea adding this on once a player wins the game
+
+add pic of rock/paper/scissors when selection has been made
 
 
 
+
+
+
+
+
+*/

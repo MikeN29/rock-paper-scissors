@@ -6,15 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="scripts.js" defer></script> 
     <link rel="stylesheet" href="styles.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <title>Rock Paper Scissors!</title>
 </head>
 <body>
+  <div class="rpsgame">
+    <h1>Rock Paper Scissors</h1>
+    <p>first to 5 wins.</p>
     <div id="userSelection">
         <button data-key="rock" id="btn">Rock</button>
         <button data-key="paper" id="btn">Paper</button>
         <button data-key="scissors" id="btn">Scissors</button>
     </div>
-    <div id="resultsDiv">
+      <div id="resultsDiv">
 
         <table class="tg" id="score">
             <thead>
@@ -35,12 +41,16 @@
                 <td class="tg-0lax" colspan="4" id="gameWinner"></td>
               </tr>
             </tbody>
-            </table>
+          </table>
+
+            
 
 
 
 
 
+      </div>
+        <button class="restartButton" onclick="restartGame()">Restart Game</button>
     </div>
 </body>
 </html>

@@ -1,3 +1,22 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.rpsgame {
+    background-color: aquamarine;
+    margin: auto;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#userSelection {
+    padding-top: 30px;
+}
+
+
 .resultsDiv {
     height: 500px;
 }
@@ -5,11 +24,31 @@
 
 .content {
     height: 30px;
+    padding-top: 10px;
+    text-align: center;
 }
 
-.tg  {border-collapse:collapse;border-spacing:0;}
+.tg  {border-collapse:collapse;border-spacing:0;width: 300px;background-color: bisque;text-align:center;}
 .tg td{overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-ted4{text-align:center;vertical-align:middle}
-.tg .tg-xwyw{text-align:center;vertical-align:middle}
 
+
+
+#gameWinner {
+    text-align: center;
+    height: 20px;
+}
+
+.restartButton {
+    text-align: center;
+}
+
+h1 {
+    padding: 0px;
+    margin: 0px;
+}
+
+p {
+    padding: 0px;
+    margin: 0px;
+}
