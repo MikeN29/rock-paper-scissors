@@ -1,15 +1,17 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    background-color: #E0F0E3;
 }
 
 .rpsgame {
-    background-color: aquamarine;
+    background-color: #E0F0E3;
     margin: auto;
     flex-direction: column;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 30px;
 }
 
 #userSelection {
@@ -28,7 +30,7 @@ body {
     text-align: center;
 }
 
-.tg  {border-collapse:collapse;border-spacing:0;width: 300px;background-color: bisque;text-align:center;}
+.tg  {border-collapse:collapse;border-spacing:0;width: 300px;text-align:center;}
 .tg td{overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{overflow:hidden;padding:10px 5px;word-break:normal;}
 
@@ -37,10 +39,6 @@ body {
 #gameWinner {
     text-align: center;
     height: 20px;
-}
-
-.restartButton {
-    text-align: center;
 }
 
 h1 {
@@ -52,3 +50,53 @@ p {
     padding: 0px;
     margin: 0px;
 }
+
+#btn {
+    justify-content: center;
+}
+
+.imageDiv {
+    width: 500px;
+    height: 250px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+
+
+.Example-btn1{
+    background-color: #081f2d; 
+    border-radius: 29px; 
+    border: 1px solid #081F2D; 
+    color: white; 
+    font-size: 15px; 
+    padding: 10px 45px; 
+    cursor: pointer; 
+    transition: 0.3s; 
+    }
+    
+.Example-btn1:hover{ 
+    background-color: #E0F0E3; 
+    color: #081F2D; 
+    border-color: #081F2D; 
+    transition: 0.3s; 
+   }
+
+.restartButton{
+    background-color: #081f2d; 
+    border-radius: 29px; 
+    border: 1px solid #081F2D; 
+    color: white; 
+    font-size: 15px; 
+    padding: 10px 45px; 
+    cursor: pointer; 
+    transition: 0.3s; 
+    }
+    
+.restartButton:hover{ 
+    background-color: #E0F0E3; 
+    color: #081F2D; 
+    border-color: #081F2D; 
+    transition: 0.3s; 
+   }

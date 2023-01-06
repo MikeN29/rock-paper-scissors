@@ -19,27 +19,42 @@ function playRound(playerSelection, computerSelection) {
     let playerSelectionLower = playerSelection.toLowerCase();
 
     if (playerSelectionLower == 'rock' && computerSelection == 'paper') {
-        console.log('You Lose! Paper beats Rock!');
         result.textContent = 'You Lose! Paper beats Rock!';
     } else if (playerSelectionLower == 'paper' && computerSelection == 'scissors') {
-        console.log('You lose! Scissors beat Paper!');
         result.textContent = 'You lose! Scissors beat Paper!';
     } else if (playerSelectionLower == 'scissors' && computerSelection == 'rock') {
-        console.log('You lose! Rock beats Scissors!');
         result.textContent = 'You lose! Rock beats Scissors!';
     } else if (playerSelectionLower == 'rock' && computerSelection == 'scissors') {
-        console.log('You win! Rock beats Scissors!');
         result.textContent = 'You win! Rock beats Scissors!';
     } else if (playerSelectionLower == 'paper' && computerSelection == 'rock') {
-        console.log('You win! Paper beats rock!');
         result.textContent = 'You win! Paper beats rock!';
     } else if (playerSelectionLower == 'scissors' && computerSelection == 'paper') {
-        console.log('You win! Scissors beat Paper!');
         result.textContent = 'You win! Scissors beat Paper!';
     } else {
-        console.log('Draw - try again!');
         result.textContent = 'Draw - try again!';
        }
+
+    if (playerSelection == 'rock') {
+        userImage.src = '/images/rock.png';
+    } else if (playerSelection == 'paper') {
+        userImage.src = '/images/paper.png';
+    } else if (playerSelection == 'scissors') {
+        userImage.src = '/images/scissors.png';
+    }
+
+    if (computerSelection == 'rock') {
+        computerImage.src = '/images/rock.png';
+    } else if (computerSelection == 'paper') {
+        computerImage.src = '/images/paper.png';
+    } else if (computerSelection == 'scissors') {
+        computerImage.src = '/images/scissors.png';
+    }
+
+
+
+
+
+
 }
 
 let playerScore = 0;
@@ -76,6 +91,19 @@ function gameScore(playerSelection, computerSelection) {
         document.getElementById("gameWinner").textContent = "The computer has won the game!";
     }
 
+    
+
+        let elems = document.getElementsByClassName("Example-btn1");
+        for (var i = 0; i < elems.length; i++) {
+            if (playerScore == 5 || computerScore == 5) {
+                elems[i].disabled = true;
+            } else {
+        let elems = document.getElementsByClassName("Example-btn1");
+        for (var i = 0; i < elems.length; i++) {
+        elems[i].disabled = false;
+    }
+}}
+
 
 }
 
@@ -100,7 +128,23 @@ const result = document.createElement('div');
 
 result.classList.add('content');
 
-resultsDiv.insertBefore(result, score)
+resultsDiv.insertBefore(result, score);
+
+
+const userImage = document.createElement('img');
+
+const computerImage =  document.createElement('img');
+
+document.querySelector('.userImage').appendChild(userImage)
+
+document.querySelector('.computerImage').appendChild(computerImage)
+
+userImage.style.width = "150px";
+userImage.style.height = "150px";
+
+computerImage.style.width = "150px";
+computerImage.style.height = "150px";
+
 
 
 function restartGame() {
@@ -110,8 +154,6 @@ function restartGame() {
 
 /*   document.getElementById("btn").disabled = true this disables
 the button. it might be a good idea adding this on once a player wins the game
-
-add pic of rock/paper/scissors when selection has been made
 
 
 
