@@ -35,19 +35,19 @@ function playRound(playerSelection, computerSelection) {
        }
 
     if (playerSelection == 'rock') {
-        userImage.src = '/images/rock.png';
+        userImage.src = 'images/rock.png';
     } else if (playerSelection == 'paper') {
-        userImage.src = '/images/paper.png';
+        userImage.src = 'images/paper.png';
     } else if (playerSelection == 'scissors') {
-        userImage.src = '/images/scissors.png';
+        userImage.src = 'images/scissors.png';
     }
 
     if (computerSelection == 'rock') {
-        computerImage.src = '/images/rock.png';
+        computerImage.src = 'images/rock.png';
     } else if (computerSelection == 'paper') {
-        computerImage.src = '/images/paper.png';
+        computerImage.src = 'images/paper.png';
     } else if (computerSelection == 'scissors') {
-        computerImage.src = '/images/scissors.png';
+        computerImage.src = 'images/scissors.png';
     }
 
 
