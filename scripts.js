@@ -87,8 +87,11 @@ function gameScore(playerSelection, computerSelection) {
 
     if (playerScore == 5) {
         document.getElementById("gameWinner").textContent = "You win the game!";
+        //remove the image from the div and add the text you win in red!
     } else if (computerScore == 5) {
         document.getElementById("gameWinner").textContent = "The computer has won the game!";
+        //remove the image from the div and add the text computer has won in red!
+
     }
 
     
@@ -137,14 +140,14 @@ const computerImage =  document.createElement('img');
 
 document.querySelector('.userImage').appendChild(userImage)
 
+
 document.querySelector('.computerImage').appendChild(computerImage)
 
-userImage.style.width = "150px";
-userImage.style.height = "150px";
+//userImage.style.width = "150px";
+//userImage.style.height = "150px";
 
-computerImage.style.width = "150px";
-computerImage.style.height = "150px";
-
+//computerImage.style.width = "150px";
+//computerImage.style.height = "150px";
 
 
 function restartGame() {

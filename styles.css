@@ -63,6 +63,13 @@ p {
     text-align: center;
 }
 
+.userImage {
+    width: 500px;
+}
+
+.computerImage {
+    width: 500px;
+}
 
 
 .Example-btn1{
@@ -100,3 +107,11 @@ p {
     border-color: #081F2D; 
     transition: 0.3s; 
    }
+
+/*img {
+    border: none;
+    width: 150px;
+    height: 150px;
+
+   }*/
+
