@@ -108,10 +108,17 @@ p {
     transition: 0.3s; 
    }
 
-/*img {
-    border: none;
-    width: 150px;
-    height: 150px;
+#userWin {
+    padding-top: 30px;
+    color: red;
+    font-size: 22px;
 
-   }*/
+}
+
+#computerWin {
+    padding-top: 30px;
+    color: red;
+    font-size: 22px;
+
+}
 

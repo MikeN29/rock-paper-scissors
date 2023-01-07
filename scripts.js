@@ -86,11 +86,18 @@ function gameScore(playerSelection, computerSelection) {
     document.getElementById("computerScore").innerHTML = computerScore;
 
     if (playerScore == 5) {
-        document.getElementById("gameWinner").textContent = "You win the game!";
-        //remove the image from the div and add the text you win in red!
+        document.getElementById("gameWinner").textContent = "restart game";
+        document.querySelector('.userImage').removeChild(userImage);
+        document.querySelector('.computerImage').removeChild(computerImage)
+        document.getElementById("userWin").textContent = "You win the game!";
+
     } else if (computerScore == 5) {
-        document.getElementById("gameWinner").textContent = "The computer has won the game!";
-        //remove the image from the div and add the text computer has won in red!
+        document.getElementById("gameWinner").textContent = "restart game";
+        document.querySelector('.computerImage').removeChild(computerImage)
+        document.querySelector('.userImage').removeChild(userImage);
+        document.getElementById("computerWin").textContent = "Computer has won the game!";
+        document.getElementById("userWin").textContent = "Game over!";
+
 
     }
 
