@@ -150,26 +150,7 @@ document.querySelector('.userImage').appendChild(userImage)
 
 document.querySelector('.computerImage').appendChild(computerImage)
 
-//userImage.style.width = "150px";
-//userImage.style.height = "150px";
-
-//computerImage.style.width = "150px";
-//computerImage.style.height = "150px";
-
-
 function restartGame() {
     location.reload()
 }
 
-
-/*   document.getElementById("btn").disabled = true this disables
-the button. it might be a good idea adding this on once a player wins the game
-
-
-
-
-
-
-
-
-*/
