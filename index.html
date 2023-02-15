@@ -1,79 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="scripts.js" defer></script> 
-    <link rel="stylesheet" href="styles.css"> 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="scripts.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
     <title>Rock Paper Scissors!</title>
-</head>
-<body>
-  <div class="rpsgame">
-    <h1>Rock Paper Scissors</h1>
-    <p>first to 5 wins.</p>
-    <div id="userSelection">
+  </head>
+  <body>
+    <div class="rpsgame">
+      <h1>Rock Paper Scissors</h1>
+      <p>first to 5 wins.</p>
+      <div id="userSelection">
         <button data-key="rock" id="btn" class="Example-btn1">Rock</button>
         <button data-key="paper" id="btn" class="Example-btn1">Paper</button>
-        <button data-key="scissors" id="btn" class="Example-btn1">Scissors</button>
+        <button data-key="scissors" id="btn" class="Example-btn1">
+          Scissors
+        </button>
       </div>
 
-        <div class="imageDiv">
-          <div class="userImage">
-            <h3>User</h3>
-            <div id="userWin"></div>      
+      <div class="imageDiv">
+        <div class="userImage">
+          <h3>User</h3>
+          <div id="userWin"></div>
+        </div>
 
-          
-          </div>
-          
-
-          <div class="computerImage">
-            <h3>Computer</h3>
-            <div id="computerWin"></div>
-            
-
-
-          </div>
-
-                
-
-    </div>
+        <div class="computerImage">
+          <h3>Computer</h3>
+          <div id="computerWin"></div>
+        </div>
+      </div>
       <div id="resultsDiv">
-
         <table class="tg" id="score">
-            <thead>
-              <tr>
-                <th class="tg-0lax"></th>
-                <th class="tg-0lax" colspan="2" class="score">Current Score</th>
-                <th class="tg-0lax"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="tg-0lax">User</td>
-                <td class="tg-0lax" id="playerScore"></td>
-                <td class="tg-0lax" id="computerScore"></td>
-                <td class="tg-0lax">CPU</td>
-              </tr>
-              <tr>
-                <td class="tg-0lax" colspan="4" id="gameWinner"></td>
-              </tr>
-            </tbody>
-          </table>
-
-            
-
-
-
-
-
+          <thead>
+            <tr>
+              <th class="tg-0lax"></th>
+              <th class="tg-0lax" colspan="2" class="score">Current Score</th>
+              <th class="tg-0lax"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tg-0lax">User</td>
+              <td class="tg-0lax" id="playerScore"></td>
+              <td class="tg-0lax" id="computerScore"></td>
+              <td class="tg-0lax">CPU</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax" colspan="4" id="gameWinner"></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      
-        <button class="restartButton" onclick="restartGame()">Restart Game</button>
-    </div>
-</body>
-</html>
 
+      <button class="restartButton" onclick="restartGame()">
+        Restart Game
+      </button>
+    </div>
+  </body>
+</html>
